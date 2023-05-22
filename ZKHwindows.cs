@@ -211,12 +211,7 @@ namespace halcon引擎测试
                 {
                     if (e.Button == MouseButtons.Left)
                     {
-                        if (NowImage != null)
-                        {
-                            mousemove = true;
-                            SaveMouseDownPosition(hWindowControl.HalconWindow);
-
-                        }
+                        
                     } //左键
 
                     else if (e.Button == MouseButtons.Right)
@@ -227,10 +222,19 @@ namespace halcon引擎测试
 
                     } //右键
 
+                    else if (e.Button == MouseButtons.Middle)
+                    {
+                        if (NowImage != null)
+                        {
+                            mousemove = true;
+                            SaveMouseDownPosition(hWindowControl.HalconWindow);
+
+                        }
+                     } //滚轮
                     else
                     {
 
-                    } //滚轮
+                    }
 
                 }
 
